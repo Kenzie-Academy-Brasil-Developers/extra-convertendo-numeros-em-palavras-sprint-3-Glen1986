@@ -5,51 +5,51 @@ body.appendChild(conteudo);
 
 const units = [
   "",
-  "One ",
-  "Two ",
-  "Tree ",
-  "For ",
-  "Five ",
-  "Six ",
-  "Seven ",
-  "Eigth ",
-  "Nine ",
-  "Ten ",
-  "Eleven ",
-  "Twelve ",
-  "Thirteen ",
-  "Forteen ",
-  "Fivteen ",
-  "Sixteen ",
-  "Seventeen ",
-  "Eighteen ",
-  "Nineteen ",
-  "Twenty ",
+  " One",
+  " Two",
+  " Tree",
+  " For",
+  " Five",
+  " Six",
+  " Seven",
+  " Eigth",
+  " Nine",
+  " Ten",
+  " Eleven",
+  " Twelve",
+  " Thirteen",
+  " Forteen",
+  " Fivteen",
+  " Sixteen",
+  " Seventeen",
+  " Eighteen",
+  " Nineteen",
+  " Twenty",
 ];
 const decenas = [
   "",
-  "ten ",
-  "twenty ",
-  "thirty ",
-  "forty ",
-  "fifty ",
-  "sixty ",
-  "seventy ",
-  "eighty ",
-  "ninety ",
+  " ten",
+  " twenty",
+  " thirty",
+  " forty",
+  " fifty",
+  " sixty",
+  " seventy",
+  " eighty",
+  " ninety",
 ];
 
 const cents = [
   "",
-  "oneHundred ",
-  "twoHundred ",
-  "threeHundred ",
-  "forHundred ",
-  "fiveHundred ",
-  "sixHundred ",
-  "sevenHundred ",
-  "eightHundred ",
-  "nineHunred ",
+  " oneHundred",
+  " twoHundred",
+  " threeHundred",
+  " forHundred",
+  " fiveHundred",
+  " sixHundred",
+  " sevenHundred",
+  " eightHundred",
+  " nineHunred",
 ];
 let inp = 0;
 let input = 0;
@@ -60,15 +60,20 @@ button.addEventListener("click", function () {
   for (let i = 0; i < valores; i++) {
     inp = i + 1;
     input = inp.toString();
+    if(input < 20){
     let unidad = units.at(input);
     frase.push(unidad);
     conteudo.innerText = frase;
-
+    }
     if (input > 20 && input < 99) {
       let idex = input.toString().split("");
       let decena = decenas.at(idex[0]);
       let unidad = units.at(idex[1]);
       let totalUnidades = `${decena}` + `${unidad}`;
+      //let totalUnidades =[];
+      //  totalUnidades.push(decena);//`${decena}` + `${unidad}`;
+      //  totalUnidades.push(unidad);//`${decena}` + `${unidad}`;
+      
       frase.push(totalUnidades);
       conteudo.innerText = frase;
       console.log(totalUnidades);
