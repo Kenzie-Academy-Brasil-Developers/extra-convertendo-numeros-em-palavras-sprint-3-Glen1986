@@ -251,7 +251,7 @@ button.addEventListener("click", function () {
       conteudo.innerText = frase;
     }
 ///////////////////////////////////////////////
-   if(input > 920 && input <= 1000){
+   if(input > 920 && input < 1000){
       let idex = input.toString().split("");
       let centena = cents.at(idex[0]);
       let decena = decenas.at(idex[1]);
